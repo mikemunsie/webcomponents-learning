@@ -11,7 +11,6 @@ http-server
 
 
 <h5>References:</h5>
-<li>
-  <a href="https://www.smashingmagazine.com/2016/12/styling-web-components-using-a-shared-style-sheet/">https://www.smashingmagazine.com/2016/12/styling-web-components-using-a-shared-style-sheet/</a>
-  <a href="https://developers.google.com/web/fundamentals/getting-started/primers/customelements">https://developers.google.com/web/fundamentals/getting-started/primers/customelements</a>
-</li>
+<a href="https://www.smashingmagazine.com/2016/12/styling-web-components-using-a-shared-style-sheet/">https://www.smashingmagazine.com/2016/12/styling-web-components-using-a-shared-style-sheet/</a>
+
+<a href="https://developers.google.com/web/fundamentals/getting-started/primers/customelements">https://developers.google.com/web/fundamentals/getting-started/primers/customelements</a>
