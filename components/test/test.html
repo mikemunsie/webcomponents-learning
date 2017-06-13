@@ -1,0 +1,43 @@
+<!-- See: https://www.smashingmagazine.com/2016/12/styling-web-components-using-a-shared-style-sheet/ -->
+<template id="template">
+  <link rel="stylesheet" href="/components/test/test.css">
+  <div class="container">
+    <h1>This is the Component</h1>
+    <input type="text" />
+    <button>Click me homie</button>
+  </div>
+</template>
+<script>
+class myTest extends HTMLElement {
+
+  constructor() {
+    super();
+    this.doc = (document._currentScript || document.currentScript).ownerDocument;
+    this.template = this.doc.importNode(this.doc.querySelector('#template').content, true);
+    this.root = this.attachShadow({mode: 'closed'});
+    this.elements = {
+      text: null
+    }
+  }
+  get html() {
+    return this.innerHTML;
+  }
+  set click(c) {
+    this._click = c;
+  }
+  set textInput(val) {
+    this.elements.text.value = val.split("").reverse().join("");
+  }
+  connectedCallback() {
+    this.root.appendChild(this.template);
+    this.root.querySelector("button").addEventListener("click", () => {
+      this._click(this.elements.text.value);
+    });
+    this.elements.text = this.root.querySelector("input[type='text']");
+  }
+  disconnectedCallback() {
+    alert("cheers")
+  }
+}
+customElements.define('my-test', myTest);
+</script>

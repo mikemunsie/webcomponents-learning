@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>App Drawer Test</title>
+  <link rel="import" href="./components/test/test.html">
+</head>
+<body>
+  <my-test id="myTest"></my-test>
+  <br/>
+  <br/>
+  <textarea id="htmlTester"></textarea>
+<script>
+  const myTestComponent = document.querySelector("#myTest");
+  test = () => {
+    alert("yeah boi")
+  }
+  document.querySelector("#htmlTester").addEventListener("keyup", (e) => {
+    myTestComponent.textInput = e.target.value;
+  });
+  myTestComponent.click = (val) => {
+    alert(val)
+  }
+</script>
+</body>
+</html>
